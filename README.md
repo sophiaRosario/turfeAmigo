@@ -1,2 +1,2 @@
-# turfeAmigo
+# Turfe amigo
 Projeto de algoritmo
