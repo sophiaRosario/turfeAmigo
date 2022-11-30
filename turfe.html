@@ -9,12 +9,30 @@
 </head>
 <body>
 </body>
-<div class="container-box">    
-    Quantidade de cavalos: <input type="text" placeholder="Ex: 5,2,9" id="inp_qnt">
-    Nome dos cavalos:  <input type="text" placeholder="Ex: Spirit" id="inp_nome">
-    Quantidade de voltas:  <input type="text" placeholder="Ex: 10,5,3" id="inp_voltas">
+<div class="container-box"> 
 
-    <button onclick="corrida()">Dar a largada</button>
+    <h1>CORRIDA TURFE</h1>  
+
+    <form>
+          
+        <div class="group">      
+          <input type="text" required id="inp_nome" >
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Nome dos cavalos:</label>
+        </div>
+
+        <div class="group">      
+            <input type="text" required id="inp_voltas" >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Quantidade de voltas:</label>
+          </div>
+    
+    </form>
+      
+            <span><a href="#">LARGADA!</a></span>
+    
 </div>
 
 </body>

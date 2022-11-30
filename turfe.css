@@ -5,19 +5,166 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    background-image: url(https://www.cavaloatleta.com.br/wp-content/uploads/2015/04/wallpapers-de-corridas-de-cavalos-1024x576.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .container-box{
     display: flex;
     flex-direction: column;
-    height: 80vh;
-    width: 50%;
+    height: 600px;
+    width: 40%;
     margin: auto;
-    margin-top: 5%;
+    
+    margin-top: 1%;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 5px;
-    border-radius: 50px;
+    border-radius: 20px;
+    background-color: white;
     -webkit-box-shadow: 4px 4px 25px 2px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px 4px 25px 2px rgba(0,0,0,0.75);
     box-shadow: 4px 4px 25px 2px rgba(0,0,0,0.75);
-
+    font-size: 25px;
 }
+ 
+.group 			  { 
+    position:relative; 
+    margin-bottom:10px; 
+  }
+  input 				{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #F3CF14;
+  }
+  input:focus 		{ outline:none; }
+  
+  /* LABEL ======================================= */
+  label 				 {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+    top:-20px;
+    font-size:14px;
+    color:#fcd30a;
+  }
+
+
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  
+  h1 {
+    --s: 0.1em;   /* the thickness of the line */
+    --c: #F3CF14; /* the color */
+    
+    color: #0000;
+    padding-bottom: var(--s);
+    background: 
+      linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+  }
+  h1:hover {--_p: 100%}
+  
+  h1 {
+    margin-bottom: 10%;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+
+
+ span{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+span a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+span a:before,
+span a:after{
+  position: absolute;
+  content: "BUTTON";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #F3CF14;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+span a:before{
+  color: #fff;
+  background:  #F3CF14;
+  transform: rotateY(0deg) translateZ(25px);
+}
+span a:after{
+  color: #fcd30a;
+  transform: rotateX(90deg) translateZ(25px);
+}
+span a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+
+
+
+
+
+
