@@ -10,6 +10,8 @@ body {
   background-image: url(https://wallpaperaccess.com/full/6728670.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+
 }
 
 .container {
@@ -116,4 +118,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+ }
+
+ #container5{
+  align-items: center;
+    justify-content: right;
+    padding-right: 8%;
+    margin: 0;
+    margin-top: 100px;
+    margin-right: 50px;
+ }
+
+ #box {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ #box img {
+  width: 620px;
  }

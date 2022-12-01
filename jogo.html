@@ -53,7 +53,15 @@
   </div>
 </div>
 
-
+<div id="box" style="display: none;">
+  <img src="https://static.manebooru.art/img/2020/10/21/2355950/thumb.gif" alt="">
+  <div id="container5" class="container">
+    <div>
+      <button onclick="volta()" class="btn-grad">Dar a volta</button>
+      <div class="texto_voltas"></div>
+    </div>
+  </div>
+</div>
 
 <audio loop controls>
   <!--agora com autoplay e sem controls-->
@@ -79,6 +87,15 @@
     btt.style.margin = '0%';
     btt.style.marginTop = '10%';
     btt.style.alignSelf = 'center';
+  }
+
+  function bt_largada() {
+    container4.style.display = 'none';
+    box.style.display = 'flex';
+  }
+
+  function volta() {
+    
   }
 
 
