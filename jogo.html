@@ -2,6 +2,7 @@
 <html lang="pt">
 
 <head>
+  <link rel="icon" href="https://art.pixilart.com/393f175e54a8e40.png">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +32,7 @@
       src="https://images.squarespace-cdn.com/content/v1/5a1c5738f6576eb8bfab7ff3/1527564045203-A5EB10W3285RE3BUL759/wand.gif"
       alt="" width="50px" style="margin-left: 15%;">
     <div class="botao">
-      <button class="btn-grad">INSERIR</button>
+      <button class="btn-grad" onclick="bt_inserir()">INSERIR</button>
     </div>
   </div>
 </div>
@@ -41,15 +42,43 @@
   
 </div>
 
+<div id="container4" class="container" style="display: none;">
+  <div class="texto2">Insira a quantidade de voltas</div>
+  <div id="" class="cavalo">
+    <img src="https://i.pinimg.com/originals/f6/17/72/f61772b367aedcd6ef3ced9227bac7b1.gif" alt="" width="190px">
+    <input type="number" placeholder="Digite aqui...">
+    <div class="botao" id="btt">
+      <button class="btn-grad" onclick="bt_largada()">Dar largada</button>
+    </div>
+  </div>
+</div>
+
+
+
+<audio loop controls>
+  <!--agora com autoplay e sem controls-->
+  <source src="【non copyrighted music】 8 bit Paradise – kawaii - editing bgm.mp3" type="audio/mpeg">
+</audio>
+
 </body>
 
 </html>
 <script>
   function cavalo() {
+    
     container.style.display = 'none';
     container2.style.display = 'block';
     container3.style.display = 'block';
+    
+  }
 
+  function bt_inserir(){
+    container4.style.display = 'block';
+    container3.style.display = 'none';
+    container2.style.display = 'none'; 
+    btt.style.margin = '0%';
+    btt.style.marginTop = '10%';
+    btt.style.alignSelf = 'center';
   }
 
 
