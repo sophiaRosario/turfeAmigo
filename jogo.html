@@ -15,7 +15,7 @@
 
 <div id="container" class="container" style="display: block;">
   <div class="texto">Insira a quantidade de unicórnios que participarão da corrida</div>
-  <input id="qntcavalos" type="number" placeholder="Insira a quantidade aqui" style="width: 230px">
+  <input id="ipt_qntcavalos" type="number" placeholder="Insira a quantidade" style="width: 230px">
 
   <button onclick="cavalo()" class="btn-grad">PRÓXIMO</button>
 
@@ -27,26 +27,27 @@
   <div class="texto">Insira o nome dos unicórnios que vão participar</div>
   <div id="" class="cavalo">
     <img src="https://i.pinimg.com/originals/8d/2a/2f/8d2a2f5cee7d94562c2ef58ca0aab672.gif" alt="" width="100px">
-    <input id="nome" class="nome" type="text" placeholder="Digite aqui...">
+    <input id="ipt_nome" class="nome" type="text" placeholder="Digite aqui...">
     <img
       src="https://images.squarespace-cdn.com/content/v1/5a1c5738f6576eb8bfab7ff3/1527564045203-A5EB10W3285RE3BUL759/wand.gif"
       alt="" width="50px" style="margin-left: 15%;">
     <div class="botao">
       <button class="btn-grad" onclick="bt_inserir()">INSERIR</button>
+      <button class="btn-grad" onclick="bt_prx()">PRÓXIMO PASSO</button>
     </div>
   </div>
 </div>
 
 <div id="container3" style="display: none;">
   ÚNICORNIOS QUE ESTÃO PARTICIPANDO <br><br>
-  
+  <div id="msg"></div>
 </div>
 
 <div id="container4" class="container" style="display: none;">
   <div class="texto2">Insira a quantidade de voltas</div>
   <div id="" class="cavalo">
     <img src="https://i.pinimg.com/originals/f6/17/72/f61772b367aedcd6ef3ced9227bac7b1.gif" alt="" width="190px">
-    <input type="number" placeholder="Digite aqui...">
+    <input id="ipt_voltas" type="number" placeholder="Digite aqui...">
     <div class="botao" id="btt">
       <button class="btn-grad" onclick="bt_largada()">Dar largada</button>
     </div>
@@ -58,7 +59,7 @@
   <div id="container5" class="container">
     <div>
       <button onclick="volta()" class="btn-grad">Dar a volta</button>
-      <div class="texto_voltas"></div>
+      <div id="texto_voltas"></div>
     </div>
   </div>
 </div>
@@ -72,33 +73,93 @@
 
 </html>
 <script>
+  var vt_cavalo = [];
+  var vt_qtd_cavalo = [];
+  var vt_qtd_voltas = [];
+  var ax_erro = true;
+  var qtdCavalo = 0;
+  var sorteio = ((Math.random * 2) + 7).toFixed
+
   function cavalo() {
-    
-    container.style.display = 'none';
-    container2.style.display = 'block';
-    container3.style.display = 'block';
+    qtdCavalo = Number(ipt_qntcavalos.value);
+
+    if (ipt_qntcavalos.value == '' || qtdCavalo < 2 || qtdCavalo > 6) {
+        alert("Insira a quantidade de Unicornios corretamente.")
+        ax_erro = false;
+      }
+
+        if (ax_erro) {
+          for (let index = 0; index < qtdCavalo; index++) {
+            vt_qtd_cavalo.push(0);            
+          }
+          console.log(vt_qtd_cavalo);
+          container.style.display = 'none';
+          container2.style.display = 'block';
+          container3.style.display = 'block';
+        }
+
     
   }
 
   function bt_inserir(){
-    container4.style.display = 'block';
-    container3.style.display = 'none';
-    container2.style.display = 'none'; 
-    btt.style.margin = '0%';
-    btt.style.marginTop = '10%';
-    btt.style.alignSelf = 'center';
+    qtdCavalo = Number(ipt_qntcavalos.value);
+    var nome = ipt_nome.value;
+
+    if (ipt_nome.value == ``) {
+      alert("Insira o nome do unicórnio")
+    } else if (vt_cavalo.length < qtdCavalo) {
+      vt_cavalo.push(nome);
+
+      msg.innerHTML = ``;
+      msg.innerHTML += `${nome}`;
+      ipt_nome.value = ``;
+    } else if (vt_cavalo.length == qtdCavalo) {
+      ipt_nome.value = ``;
+      alert("Número de unicórnios excedido.")
+    }
+
   }
 
+  function bt_prx() {
+    if (vt_cavalo.length < qtdCavalo) {
+      alert("Insira a quantidade de Unicornios corretamente.")
+    } else if (vt_cavalo.length == qtdCavalo) {
+      container4.style.display = 'block';
+      container3.style.display = 'none';
+      container2.style.display = 'none'; 
+      btt.style.margin = '0%';
+      btt.style.marginTop = '10%';
+      btt.style.alignSelf = 'center';
+    }
+  }
   function bt_largada() {
-    container4.style.display = 'none';
-    box.style.display = 'flex';
+    voltas = Number(ipt_voltas.value);
+    if (ipt_voltas.value < 1 || ipt_voltas.value > 10) {
+      alert("Por favor, tenha empatia com os bichinhos. As voltas são limitadas de 1 a 10.")
+    } else {
+      container4.style.display = 'none';
+      box.style.display = 'flex';
+    }
   }
 
+  var cont = 0;
   function volta() {
-    
+    voltas = Number(ipt_voltas.value);
+
+    for (var index = 0; index < vt_qtd_cavalo.length; index++) {
+      var tempoAleatorio = (Math.random() * 2 + 7).toFixed(2);
+      vt_qtd_cavalo[index] += tempoAleatorio;
+
+      texto_voltas.innerHTML += `Nome do unicórnio: ${vt_cavalo[index]} <br>
+      Tempo da volta: ${tempoAleatorio} <br>
+      Tempo total: ${vt_qtd_cavalo[index]}<br><br>
+      `;
+    }
+    cont++
+
+    if (cont == voltas + 1) {
+      alert('Fim da corrida')
+    }
+
   }
-
-
-
-
 </script>
