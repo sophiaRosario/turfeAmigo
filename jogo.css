@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,band wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url(https://wallpaperaccess.com/full/6728670.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 500px;
+  background-color: white;
+  margin-top: 6%;
+  margin-left: 27%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  padding: 30px 40px;
+  height: 200px;
+  box-shadow: -5px 0px 121px 15px rgba(255, 255, 255, 0.73);
+  -webkit-box-shadow: -5px 0px 121px 15px rgba(255, 255, 255, 0.73);
+  -moz-box-shadow: -5px 0px 121px 15px rgba(255, 255, 255, 0.73);
+}
+
+.texto {
+  font-size: 20px;
+  width: 70%;
+  display: flex;
+  margin-left: 16%;
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+#qntcavalos {
+  font-size: 15px;
+  margin-top: 20px;
+  margin-left: 28%;
+  margin-bottom: 5%;
+  border: 1px solid purple;
+}
+
+#nome {
+  width: 45%;
+  font-size: 15px;
+  margin-left: 8%;
+  margin-bottom: 5%;
+  border: none;
+  border-bottom: 1px solid #8CA6DB;
+}
+
+#container3 {
+  background-color: white;
+  margin-top: 20px;
+  width: 500px;
+  height: auto;
+  border-radius: 20px;
+  min-height: 100px;
+  margin-left: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 1%;
+}
+
+.botao {
+  margin-top: 40%;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #B993D6 0%, #8CA6DB 51%, #B993D6 100%);
+  margin-top: 2%;
+  margin-left: 37%;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.cavalo input {
+  outline: none;
+  border: none;
+  border-bottom: 1px #B993D6 solid;
+}

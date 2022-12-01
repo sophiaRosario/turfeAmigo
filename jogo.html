@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U N I C O R N</title>
+  <link rel="stylesheet" href="jogo.css">
+</head>
+
+<body>
+</body>
+
+<div id="container" class="container" style="display: block;">
+  <div class="texto">Insira a quantidade de unicórnios que participarão da corrida</div>
+  <input id="qntcavalos" type="number" placeholder="Insira a quantidade aqui" style="width: 230px">
+
+  <button onclick="cavalo()" class="btn-grad">PRÓXIMO</button>
+
+  <img src="https://i.pinimg.com/originals/97/a3/8d/97a38dadf9d21c84ef7ff30ea35bd204.gif" alt="" width="290px"
+    style="margin-left: 125%;">
+</div>
+
+<div id="container2" class="container" style="display: none;">
+  <div class="texto">Insira o nome dos unicórnios que vão participar</div>
+  <div id="" class="cavalo">
+    <img src="https://i.pinimg.com/originals/8d/2a/2f/8d2a2f5cee7d94562c2ef58ca0aab672.gif" alt="" width="100px">
+    <input id="nome" class="nome" type="text" placeholder="Digite aqui...">
+    <img
+      src="https://images.squarespace-cdn.com/content/v1/5a1c5738f6576eb8bfab7ff3/1527564045203-A5EB10W3285RE3BUL759/wand.gif"
+      alt="" width="50px" style="margin-left: 15%;">
+    <div class="botao">
+      <button class="btn-grad">INSERIR</button>
+    </div>
+  </div>
+</div>
+
+<div id="container3" style="display: none;">
+  ÚNICORNIOS QUE ESTÃO PARTICIPANDO <br><br>
+  
+</div>
+
+</body>
+
+</html>
+<script>
+  function cavalo() {
+    container.style.display = 'none';
+    container2.style.display = 'block';
+    container3.style.display = 'block';
+
+  }
+
+
+
+
+</script>
