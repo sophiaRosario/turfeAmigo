@@ -45,6 +45,8 @@ body {
   font-size: 20px;
   display: flex;
   text-align: center;
+  flex-direction: column;
+  align-items: center;
 }
 .texto2 {
   font-size: 20px;
@@ -86,10 +88,6 @@ body {
   align-items: center;
   text-align: center;
   padding-top: 1%;
-}
-
-.botao {
-  margin-top: 40%;
 }
 
 .btn-grad {
