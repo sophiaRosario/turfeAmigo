@@ -47,7 +47,16 @@ body {
   text-align: center;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+  padding-left: 30px;
+  padding-right: 30px;
 }
+
+.vertical {
+  display: flex;
+  align-items: center;
+}
+
 .texto2 {
   font-size: 20px;
   width: 70%;
@@ -74,20 +83,11 @@ body {
   border-bottom: 1px solid #8CA6DB;
 }
 
-#container3 {
-  background-color: white;
-  margin-top: 20px;
-  width: 500px;
-  height: auto;
-  border-radius: 20px;
-  min-height: 100px;
-  margin-left: 30%;
+#tri {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 1%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .btn-grad {
@@ -100,7 +100,6 @@ body {
   color: white;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
-  display: block;
   cursor: pointer;
   border: none;
 }

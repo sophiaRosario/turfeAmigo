@@ -23,11 +23,13 @@
   <div id="bi" class="container" style="display: none;">
     <div class="texto">
       <p>Insira o nome dos unicórnios que vão participar</p>
-      <img src="https://i.pinimg.com/originals/8d/2a/2f/8d2a2f5cee7d94562c2ef58ca0aab672.gif" alt="" width="100px">
-      <input id="ipt_nome" class="nome" type="text" placeholder="Digite aqui...">
-      <img
-        src="https://images.squarespace-cdn.com/content/v1/5a1c5738f6576eb8bfab7ff3/1527564045203-A5EB10W3285RE3BUL759/wand.gif"
-        alt="" width="50px" style="margin-left: 15%;">
+      <div class="vertical">        
+        <img src="https://i.pinimg.com/originals/8d/2a/2f/8d2a2f5cee7d94562c2ef58ca0aab672.gif" alt="" width="100px">
+        <input id="ipt_nome" class="nome" type="text" placeholder="Digite aqui...">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5a1c5738f6576eb8bfab7ff3/1527564045203-A5EB10W3285RE3BUL759/wand.gif"
+          alt="" width="75px">
+      </div>
       <div class="botao">
         <button class="btn-grad" onclick="bt_inserir()">INSERIR</button>
         <button class="btn-grad" onclick="bt_prx()">PRÓXIMO PASSO</button>
@@ -67,7 +69,7 @@
 
 </div>
 
-<audio loop controls>
+<audio loop controls id="msc">
   <!--agora com autoplay e sem controls-->
   <source src="【non copyrighted music】 8 bit Paradise – kawaii - editing bgm.mp3" type="audio/mpeg">
 </audio>
@@ -98,6 +100,7 @@
       uni.style.display = 'none';
       bi.style.display = 'flex';
       tri.style.display = 'flex';
+      msc.style.marginTop = '60px';
     }
   }
 
